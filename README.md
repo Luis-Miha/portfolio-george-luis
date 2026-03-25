@@ -111,9 +111,6 @@ colors: {
 }
 ```
 
-### Placeholder
-
-Tutti i testi segnaposto sono marcati con `[DA SOSTITUIRE]` per facilitare la personalizzazione.
 
 ## 📱 Sezioni
 
