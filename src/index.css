@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * index.css - Stili globali del portfolio
+ * Include: Tailwind CSS, stili custom
+ * 
+ * NOTA: I font Google (Inter e JetBrains Mono) sono caricati
+ * tramite i tag <link> nel file index.html per performance migliori
+ */
+
+/* Stili base */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    font-family:
+      "Inter",
+      system-ui,
+      -apple-system,
+      sans-serif;
+  }
+
+  /* Custom scrollbar per dark theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-[#0a0a0a];
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-600;
+  }
+
+  /* Selezione testo personalizzata */
+  ::selection {
+    @apply bg-primary-500/30 text-white;
+  }
+}
+
+/* Componenti riutilizzabili */
+@layer components {
+  /* Container principale */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Testo con gradiente */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-500 to-blue-500 bg-clip-text text-transparent;
+  }
+
+  /* Card con effetto hover */
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+
+  /* Bottone primario */
+  .btn-primary {
+    @apply px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg shadow-lg shadow-primary-500/30 transition-colors;
+  }
+
+  /* Bottone secondario */
+  .btn-secondary {
+    @apply px-6 py-3 border-2 border-primary-500 text-primary-500 hover:bg-primary-500/10 font-semibold rounded-lg transition-colors;
+  }
+
+  /* Input form */
+  .input-custom {
+    @apply w-full px-4 py-3 bg-[#0a0a0a] border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none transition-colors;
+  }
+
+  /* Tag tecnologia */
+  .tech-tag {
+    @apply px-3 py-1 bg-gray-800/50 text-gray-400 text-xs font-mono rounded-full;
+  }
+}
+
+/* Utility personalizzate */
+@layer utilities {
+  /* Animazione pulse lenta */
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Animazione bounce lenta */
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+
+  /* Gradient radiale per background */
+  .bg-gradient-radial {
+    background: radial-gradient(var(--tw-gradient-stops));
+  }
+
+  /* Line clamp per limitare righe testo */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Animazioni keyframe personalizzate */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.6);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Stili per il typing cursor */
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}

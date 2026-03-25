@@ -1,0 +1,25 @@
+{
+  "version": 1.1,
+  "atDirectives": {
+    "tailwind": {
+      "description": "Tailwind CSS directive",
+      "labels": ["base", "components", "utilities"]
+    },
+    "apply": {
+      "description": "Apply Tailwind utility classes"
+    },
+    "layer": {
+      "description": "Define a custom CSS layer",
+      "labels": ["base", "components", "utilities"]
+    },
+    "screen": {
+      "description": "Apply styles at a specific breakpoint"
+    },
+    "variants": {
+      "description": "Generate variant styles"
+    },
+    "responsive": {
+      "description": "Generate responsive variants"
+    }
+  }
+}
