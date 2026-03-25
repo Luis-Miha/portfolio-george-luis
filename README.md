@@ -62,7 +62,7 @@ portfolio/
 
 ```bash
 # Clona il repository
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/Luis-Miha/portfolio.git
 
 # Entra nella directory del progetto
 cd portfolio
@@ -151,17 +151,7 @@ Questo progetto è open source e disponibile sotto licenza MIT.
 
 **George Luis Mihalache**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- Email: your@email.com
-
-## 🙏 Ringraziamenti
-
-- [React](https://react.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [React Icons](https://react-icons.github.io/react-icons/)
-- [Vite](https://vitejs.dev/)
+- GitHub: [@Luis-Miha](https://github.com/Luis-Miha)
 
 ---
 
