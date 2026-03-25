@@ -2,7 +2,7 @@
 
 Portfolio personale sviluppato con React, Tailwind CSS e Framer Motion.
 
-![Portfolio Preview](https://via.placeholder.com/1200x630/0a0a0a/6366f1?text=Portfolio+Preview)
+🔗 **[LIVE DEMO](https://portfolio-george-luis.vercel.app/)**
 
 ## ✨ Caratteristiche
 
