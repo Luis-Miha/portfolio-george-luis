@@ -87,7 +87,7 @@ const Hero = () => {
                 <FaArrowRight />
               </a>
               <a
-                href="#"
+                href="https://rxresu.me/mihalache.1869059/cv-eng-luis-mihalache"
                 className="inline-flex items-center space-x-2 border-2 border-[#2B6CB0] text-[#2B6CB0] hover:bg-[#2B6CB0] hover:text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
               >
                 <span>Scarica CV</span>
