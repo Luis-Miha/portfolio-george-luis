@@ -49,7 +49,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-            Su <span className="text-[#2B6CB0]">Me</span>
+            Su di <span className="text-[#2B6CB0]">Me</span>
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-12">
