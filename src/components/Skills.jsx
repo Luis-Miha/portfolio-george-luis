@@ -18,6 +18,9 @@ import {
   SiCypress,
   SiPostman,
   SiMysql,
+  SiNextdotjs,
+  SiStripe,
+  SiTypescript,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -26,6 +29,7 @@ const Skills = () => {
       title: "Framework & Librerie",
       skills: [
         { name: "React.js", icon: FaReact, level: 90 },
+        { name: "Next.js 16", icon: SiNextdotjs, level: 85 },
         { name: "Tailwind CSS", icon: SiTailwindcss, level: 90 },
         { name: "Bootstrap 5", icon: SiBootstrap, level: 80 },
       ],
@@ -33,10 +37,20 @@ const Skills = () => {
     {
       title: "Tecnologie Core",
       skills: [
+        { name: "TypeScript", icon: SiTypescript, level: 85 },
         { name: "JavaScript ES6+", icon: FaJs, level: 90 },
         { name: "HTML5", icon: FaHtml5, level: 95 },
         { name: "CSS3", icon: FaCss3, level: 90 },
         { name: "Flexbox & Grid", icon: FaCss3, level: 85 },
+      ],
+    },
+    {
+      title: "API & Servizi Esterni",
+      skills: [
+        { name: "Stripe", icon: SiStripe, level: 80 },
+        { name: "Prisma ORM", icon: FaDatabase, level: 75 },
+        { name: "RESTful API", icon: FaDatabase, level: 80 },
+        { name: "Node.js", icon: FaNodeJs, level: 75 },
       ],
     },
     {
@@ -51,10 +65,8 @@ const Skills = () => {
     {
       title: "Gestione Dati & Backend",
       skills: [
-        { name: "RESTful API", icon: FaDatabase, level: 80 },
-        { name: "JSON", icon: FaJs, level: 90 },
-        { name: "Node.js", icon: FaNodeJs, level: 75 },
         { name: "MySQL", icon: SiMysql, level: 70 },
+        { name: "JSON", icon: FaJs, level: 90 },
       ],
     },
     {

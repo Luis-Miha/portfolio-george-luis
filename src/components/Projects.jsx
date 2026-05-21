@@ -1,8 +1,19 @@
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { SiGumroad } from "react-icons/si";
 
 const Projects = () => {
   const projects = [
+    {
+      title: "ShipKit",
+      description:
+        "Template completo Next.js 16 con autenticazione, Stripe, Prisma e email già integrati. Lancia il tuo SaaS in giorni, non settimane.",
+      tech: ["Next.js 16", "TypeScript", "Prisma", "Stripe", "Tailwind", "Resend"],
+      liveUrl: "https://shipkit-eta.vercel.app/",
+      githubUrl: "https://leyrus.gumroad.com/l/shipkit",
+      purchaseUrl: "https://leyrus.gumroad.com/l/shipkit",
+      previewUrl: "https://shipkit-eta.vercel.app/",
+    },
     {
       title: "Nexus Hardware Shop",
       description:
@@ -60,7 +71,7 @@ const Projects = () => {
                       width: "200%",
                       height: "200%",
                     }}
-                    sandbox="allow-same-origin"
+                    sandbox="allow-same-origin allow-scripts allow-forms"
                   />
 
                   {/* Overlay with links */}
@@ -76,13 +87,13 @@ const Projects = () => {
                         <span>Vai al sito</span>
                       </a>
                       <a
-                        href={project.githubUrl}
+                        href={project.purchaseUrl || project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center space-x-2 border border-white text-white hover:bg-white hover:text-black px-4 py-2 rounded-lg transition-colors duration-200"
                       >
-                        <FaGithub />
-                        <span>GitHub</span>
+                        {project.purchaseUrl ? <SiGumroad /> : <FaGithub />}
+                        <span>{project.purchaseUrl ? "Acquista" : "GitHub"}</span>
                       </a>
                     </div>
                   </div>
@@ -124,13 +135,13 @@ const Projects = () => {
                       <span>Live Demo</span>
                     </a>
                     <a
-                      href={project.githubUrl}
+                      href={project.purchaseUrl || project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                     >
-                      <FaGithub size={14} />
-                      <span>Codice</span>
+                      {project.purchaseUrl ? <SiGumroad size={14} /> : <FaGithub size={14} />}
+                      <span>{project.purchaseUrl ? "Acquista" : "Codice"}</span>
                     </a>
                   </div>
                 </div>
