@@ -1,9 +1,19 @@
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { SiGumroad } from "react-icons/si";
+import devboardDashboard from "../assets/projects/devboard-dashboard.png";
 
 const Projects = () => {
   const projects = [
+    {
+      // Non deployato online: nessun liveUrl, il preview e' uno screenshot statico
+      title: "DevBoard",
+      description:
+        "Project management tool real-time in stile Linear/Jira: board kanban con drag & drop, ticket con commenti live e notifiche push. Full-stack React + Express/MySQL con autenticazione JWT, non deployato online — codice pubblico su GitHub.",
+      tech: ["React", "TypeScript", "Node.js", "Express", "Socket.io", "MySQL"],
+      githubUrl: "https://github.com/Luis-Miha/devboard",
+      image: devboardDashboard,
+    },
     {
       title: "ShipKit",
       description:
@@ -57,34 +67,45 @@ const Projects = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-[#0a0a0a] border border-[#222222] rounded-xl overflow-hidden hover:border-[#2B6CB0] transition-colors duration-300"
               >
-                {/* Preview Container with iframe */}
+                {/* Preview: iframe del sito live oppure screenshot statico */}
                 <div className="relative h-64 bg-[#1a1a1a] overflow-hidden group">
-                  <iframe
-                    src={project.previewUrl}
-                    title={project.title}
-                    className="w-[200%] h-[200%] scale-50 origin-top-left pointer-events-none"
-                    style={{
-                      border: "none",
-                      transform: "scale(0.5)",
-                      transformOrigin: "top left",
-                      width: "200%",
-                      height: "200%",
-                    }}
-                    sandbox="allow-same-origin allow-scripts allow-forms"
-                  />
+                  {project.previewUrl ? (
+                    <iframe
+                      src={project.previewUrl}
+                      title={project.title}
+                      className="w-[200%] h-[200%] scale-50 origin-top-left pointer-events-none"
+                      style={{
+                        border: "none",
+                        transform: "scale(0.5)",
+                        transformOrigin: "top left",
+                        width: "200%",
+                        height: "200%",
+                      }}
+                      sandbox="allow-same-origin allow-scripts allow-forms"
+                    />
+                  ) : (
+                    <img
+                      src={project.image}
+                      alt={`Screenshot della dashboard di ${project.title}`}
+                      loading="lazy"
+                      className="w-full h-full object-cover object-top"
+                    />
+                  )}
 
                   {/* Overlay with links */}
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="flex space-x-4">
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center space-x-2 bg-[#2B6CB0] hover:bg-[#1a4a7a] text-white px-4 py-2 rounded-lg transition-colors duration-200"
-                      >
-                        <FaExternalLinkAlt />
-                        <span>Vai al sito</span>
-                      </a>
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center space-x-2 bg-[#2B6CB0] hover:bg-[#1a4a7a] text-white px-4 py-2 rounded-lg transition-colors duration-200"
+                        >
+                          <FaExternalLinkAlt />
+                          <span>Vai al sito</span>
+                        </a>
+                      )}
                       {project.githubUrl && (
                         <a
                           href={project.githubUrl}
@@ -112,7 +133,7 @@ const Projects = () => {
 
                   {/* Badge */}
                   <div className="absolute top-4 left-4 bg-[#2B6CB0]/90 text-white text-xs px-2 py-1 rounded">
-                    Preview
+                    {project.previewUrl ? "Preview" : "Screenshot"}
                   </div>
                 </div>
 
@@ -137,15 +158,17 @@ const Projects = () => {
 
                   {/* Links */}
                   <div className="flex items-center space-x-4 mt-4 pt-4 border-t border-[#222222]">
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-[#2B6CB0] hover:text-white transition-colors duration-200 text-sm"
-                    >
-                      <FaExternalLinkAlt size={14} />
-                      <span>Live Demo</span>
-                    </a>
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 text-[#2B6CB0] hover:text-white transition-colors duration-200 text-sm"
+                      >
+                        <FaExternalLinkAlt size={14} />
+                        <span>Live Demo</span>
+                      </a>
+                    )}
                     {project.githubUrl && (
                       <a
                         href={project.githubUrl}
