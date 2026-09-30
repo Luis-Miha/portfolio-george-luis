@@ -19,6 +19,7 @@ Junior Front-End Developer con background in Ingegneria Informatica alla Sapienz
 
 | Progetto                 | Link                                                                                                             |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| ShipKit                  | [https://shipkit-eta.vercel.app/](https://shipkit-eta.vercel.app/)                                               |
 | Nexus Hardware Shop      | [https://nexus-hardware-gaming-premium-shop.vercel.app/](https://nexus-hardware-gaming-premium-shop.vercel.app/) |
 | La Tavola Restaurant App | [https://la-tavola-three.vercel.app/](https://la-tavola-three.vercel.app/)                                       |
 | Portfolio                | [https://portfolio-george-luis.vercel.app/](https://portfolio-george-luis.vercel.app/)                           |
